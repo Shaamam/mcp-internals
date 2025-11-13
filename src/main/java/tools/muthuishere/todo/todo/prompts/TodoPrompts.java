@@ -3,9 +3,11 @@ package tools.muthuishere.todo.todo.prompts;
 import io.modelcontextprotocol.spec.McpSchema;
 import org.springaicommunity.mcp.annotation.McpArg;
 import org.springaicommunity.mcp.annotation.McpPrompt;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class TodoPrompts {
 
     @McpPrompt(
