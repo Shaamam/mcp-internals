@@ -1,4 +1,4 @@
-# Chapter 1: Building a Multi-Protocol MCP Server with Spring Boot
+# Building a Multi-Protocol MCP Server with Spring Boot
 
 This guide shows how to create a Spring Boot Todo application that can serve as different types of Model Context Protocol (MCP) servers.
 
@@ -116,27 +116,12 @@ logging.level.root=INFO
 logging.level.org.apache.tomcat.util.compat=ERROR
 # Note: MCP server metadata (name, version, description) are defined in main application.properties
 ```
-### Streamable Profile (`application-stateless.properties`)
-```properties
-# Streamable WebMVC Profile - Streamable HTTP
-# Uses spring-ai-starter-mcp-server-webmvc dependency
-
-# Spring AI MCP Server Streamable configuration
-spring.ai.mcp.server.protocol=STATELESS
-
-# Server configuration for WebMVC
-server.port=8080
-
-logging.level.root=INFO
-logging.level.org.apache.tomcat.util.compat=ERROR
-# Note: MCP server metadata (name, version, description) are defined in main application.properties
-```
 
 ## Step 3: MCP Server Types
 
 One application can act as:
 - **STDIO Server**: Standard input/output communication
-- **SSE Server**: Server-Sent Events over HTTP
+- **SSE Server**: Server-Sent Events over HTTP  
 - **Streamable HTTP Server**: HTTP POST/GET with streaming http
 
 Switch between types by changing the active profile.
@@ -450,7 +435,7 @@ tasks:
 }
 ```
 
-### SSE Server
+### SSE Server  
 ```json
 "todo-mcp-server-sse": {
     "url": "http://localhost:8080/sse",
@@ -477,7 +462,7 @@ tasks:
 ## Available MCP Tools
 
 - `fetch-all-todos`: Get all todo items
-- `fetch-todo-by-id`: Get a specific todo by ID
+- `fetch-todo-by-id`: Get a specific todo by ID  
 - `make-todo`: Create a new todo item
 - `change-todo`: Update an existing todo
 - `remove-todo`: Delete a todo by ID
